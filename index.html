@@ -50,16 +50,20 @@
       text-align: center; position: relative; overflow: hidden;
       padding-top: 80px;
     }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background-image: url('https://www.ruparelstardom.com/image/web1.jpg');
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      opacity: 0.35;
-      transition: opacity 0.3s;
-    }
+ .hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url('https://www.ruparelstardom.com/image/web1.jpg');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.hero-title, .hero-sub {
+  display: none;
+}
     .hero-content { position: relative; z-index: 1; padding: 0 24px; }
     .hero-eyebrow { font-size: 1.7rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; font-weight: bold; }
     .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 7vw, 5.5rem); font-weight: 700; line-height: 1.1; margin-bottom: 24px; }
@@ -204,9 +208,6 @@
     .mobile-menu a:hover { color: var(--gold); }
     .mobile-menu-cta { background: var(--gold); color: var(--white) !important; text-align: center; font-weight: 600 !important; border-bottom: none !important; margin: 12px 20px 4px; }
 
-    /* ============================================
-       RESPONSIVE — TABLET (max 768px)
-    ============================================ */
     @media (max-width: 768px) {
       /* NAV */
       nav { padding: 14px 20px; }
@@ -216,7 +217,7 @@
 
       /* HERO — mobile image, position top so building shows fully */
       .hero {
-        height: 100svh;        /* respects mobile browser chrome */
+        height: 100svh;
         min-height: 500px;
         padding-top: 69px;
       }
@@ -290,9 +291,6 @@
       #snackbar { min-width: unset; width: calc(100% - 40px); right: 20px; left: 20px; }
     }
 
-    /* ============================================
-       RESPONSIVE — SMALL PHONES (max 480px)
-    ============================================ */
     @media (max-width: 480px) {
       .hero-title { font-size: 1.85rem; }
       .hero-eyebrow { font-size: 0.65rem; }
@@ -341,8 +339,8 @@
     <h1 class="hero-title">Where <span>Stardom</span><br/>Meets Home</h1>
     <p class="hero-sub">Premium 2 & 3 BHK residences spread across 3 acres with 42+ world-class amenities in Western Mumbai's most celebrated address.</p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="openModal()">Get Price Details</button>
-      <button class="btn-outline" onclick="document.getElementById('overview').scrollIntoView({behavior:'smooth'})">Explore Project</button>
+      <!-- <button class="btn-primary" onclick="openModal()">Get Price Details</button> -->
+      <!-- <button class="btn-outline" onclick="document.getElementById('overview').scrollIntoView({behavior:'smooth'})">Explore Project</button> -->
     </div>
   </div>
   <div class="hero-scroll">
@@ -367,7 +365,7 @@
         <img src="https://www.ruparelstardom.com/image/overview.jpg" alt="Ruparel Stardom Overview" class="overview-img" onerror="this.style.background='#ddd';this.removeAttribute('src')" />
       </div>
       <div class="overview-text">
-        <p class="section-eyebrow">About the Project</p>
+        <p style="font-size: 1.7rem;" class="section-eyebrow">About the Project</p>
         <h2 class="section-title" style="color:var(--dark)">Western Mumbai's<br/>Finest Address</h2>
         <div class="section-divider"></div>
         <p>Best entry into the lifestyle capital of Malad with unmatched connectivity and premium lifestyle offerings. Ruparel Stardom is Malad's most successful and celebrated development — a landmark that redefines luxury living in Western suburbs.</p>
