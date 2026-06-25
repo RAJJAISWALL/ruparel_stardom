@@ -221,12 +221,13 @@
         min-height: 500px;
         padding-top: 69px;
       }
-      .hero::before {
-        background-image: url('https://www.ruparelstardom.com/image/mob1.jpg');
-        background-size: cover;
-        background-position: center top;  /* key fix — anchors to top of image */
-        opacity: 0.5;
-      }
+     .hero::before {
+    background-image: url('https://www.ruparelstardom.com/image/mob1.jpg');
+    background-size: contain;
+    background-position: center center;  
+    background-repeat: no-repeat;
+    opacity: 1;                        
+  }
       .hero-eyebrow { font-size: 0.7rem; letter-spacing: 2px; }
       .hero-title { font-size: 2.1rem; }
       .hero-sub { font-size: 0.83rem; }
